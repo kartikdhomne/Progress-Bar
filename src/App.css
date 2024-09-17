@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.title {
+  color: rgb(255, 0, 144);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 20px;
+  color: rgb(0, 89, 255);
+}
+
+.progress {
+  width: 500px;
+  height: 25px;
+  background-color: rgb(210, 205, 205);
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.progress span {
+  width: 100%;
+  position: absolute;
+  /* Added this */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* Ensures the percentage text stays on top of the bar */
+}
+
+.percent {
+  height: 100%;
+  background-color: #00c251;
+  z-index: 0;
+  transition: width 0.3s ease-in-out;
+  /* Smooth transition when updating */
+}
